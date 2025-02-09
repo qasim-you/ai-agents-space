@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Brain, Loader2, User, Zap, Gauge, Database, SpaceIcon as Planet } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import Link from "next/link"
 
 export default function SpaceMissionHub() {
   const [agentType, setAgentType] = useState("missionPlanner")
@@ -170,12 +171,21 @@ export default function SpaceMissionHub() {
     <div className="w-full">
       <Card className="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl">
         <CardHeader className="p-6">
-          <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-2">
-            Space Agent
-          </CardTitle>
+        <div className="flex justify-between items-center p-4">
+        <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-2">
+
+Space Agent
+</CardTitle>
+<Link href="/doppler-effect">
+<Button className="w-30" variant="outline">Dopler Effect</Button>
+</Link>
+</div>
+          
+
           <CardDescription className="text-indigo-200 text-center text-sm sm:text-base">
             Comprehensive AI-powered assistance for all aspects of space missions.
           </CardDescription>
+
         </CardHeader>
         <CardContent className="p-6">
           <Tabs value={agentType} onValueChange={setAgentType} className="w-full">

@@ -1,37 +1,66 @@
-# AIstronauts: Space Mission Control
+# Integrating Gemini API and LangChain into a Next.js Project
 
-AIstronauts is an AI-powered space mission planning and management application. It utilizes LangChain and Google's Gemini-Pro model to provide comprehensive assistance for various aspects of space missions.
+## Introduction
+- Welcome to our presentation on integrating Gemini API and LangChain into a Next.js project
+- We'll walk through the entire process, from project setup to deployment
 
-## Table of Contents
+## 1. Project Setup
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Code Flow](#code-flow)
-- [Setup and Installation](#setup-and-installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+### 1.1 Create Next.js Project
+- Use `create-next-app` to set up a new Next.js project
+- Command: `npx create-next-app@latest my-ai-project`
+- Choose TypeScript, ESLint, and Tailwind CSS options
 
-## Features
+### 1.2 Set up project structure
+- Organize files and folders for better maintainability
+- Create `components`, `lib`, and `types` directories
 
-- Mission Planning
-- Automation Planning
-- Efficiency Optimization
-- Data Access and Interpretation
-- Resource Management (Crew and Robot)
-- AI-powered responses using Gemini-Pro
-- Summarization of AI responses
+### 1.3 Install dependencies
+- Install required packages:
+  - `npm install @langchain/google-genai @langchain/core`
 
-## Technologies Used
+### 1.4 Configure environment variables
+- Create a `.env.local` file in the project root
+- Add your Gemini API key: `GOOGLE_API_KEY=your_api_key_here`
 
-- Next.js 14 (App Router)
-- React
-- TypeScript
-- LangChain
-- Google Gemini-Pro AI model
-- Tailwind CSS
-- shadcn/ui components
+## 2. Backend Implementation
 
-## Project Structure
+### 2.1 Create API route for Gemini
+- Create a new file: `app/api/agent/route.ts`
+- Implement the POST method to handle requests
+- Use NextResponse for API responses
 
+### 2.2 Implement LangChain with Gemini
+- Import necessary LangChain components
+- Set up the ChatGoogleGenerativeAI model
+- Create system and human messages
+- Invoke the model and return the response
+
+## 3. Frontend Development
+
+### 3.1 Create UI components
+- Develop reusable components like Input, Button, and Card
+- Use Tailwind CSS for styling
+
+### 3.2 Implement client-side logic
+- Create a form to capture user input
+- Implement state management using React hooks
+- Handle form submission and API calls
+
+## 4. Finalization
+
+### 4.1 Test the application
+- Conduct thorough testing of all features
+- Ensure proper error handling and edge cases are covered
+
+### 4.2 Deploy to Vercel
+- Push your code to a GitHub repository
+- Connect your Vercel account to the repository
+- Deploy the application with environment variables set
+
+## Conclusion
+- Recap the integration process
+- Highlight the benefits of using Gemini API and LangChain in a Next.js project
+- Encourage questions and further exploration
+
+Thank you for your attention!
